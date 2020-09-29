@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>EcAppDemo</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+    <nav>
+      <div class="hamburger">
+        <div class="line"></div>
+        <div class="line"></div>
+        <div class="line"></div>
+      </div>
+      <div class="top-link">
+        <%= link_to "トップ" %>
+      </div>
+      <ul class="nav-links">
+        <li><%= link_to "商品一覧" %></li>
+        <li><%= link_to "新規登録" %></li>
+        <li><%= link_to "ログイン" %></li>
+      </ul>
+    </nav>
+    <%= yield %>
+  </body>
+</html>
